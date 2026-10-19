@@ -115,7 +115,7 @@ public class rentalCar {
     }
 
 
-    // Method 4: Ask about GPS
+    /// Method 4: Ask about GPS
     public static boolean askGPS(Scanner input) {
 
         System.out.println("Do you want GPS? (yes/no)");
