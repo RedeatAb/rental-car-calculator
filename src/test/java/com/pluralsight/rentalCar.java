@@ -64,12 +64,12 @@ public class rentalCar {
 
         // display Cost Amount
         System.out.println("---COST BREAKDOWN-----");
-        System.out.println("The Cost perday is: " + costPerDay);
-        System.out.println("The  cost with road assitance is " + roadAssitCost);
-        System.out.println("The cost with GPS is " + gpsCost);
-        System.out.println("The cost with Toll Tag is " + tollTagCost);
-        System.out.println("The cost of Rental car under 25 is " + ageCost);
-        System.out.printf("The total amount is  $%.2f%n" , totalCost);
+        System.out.printf("The cost perday is $%.2f%n",costPerDay);
+        System.out.printf("The cost with road assitance is $%.2f%n",roadAssitCost);
+        System.out.printf("The cost with GPS is $%.2f%n" ,gpsCost);
+        System.out.printf("The cost with Toll Tag is $%.2f%n",tollTagCost);
+        System.out.printf("The cost of Rental car under 25 is $%.2f%n",ageCost);
+        System.out.printf("The total amount is $%.2f%n",totalCost);
 
         input.close();
 
