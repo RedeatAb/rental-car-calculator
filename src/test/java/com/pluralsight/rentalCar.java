@@ -51,17 +51,23 @@ public class rentalCar {
     }
     public static int daysOfRental(Scanner input){
 
-        System.out.print("how many days are you renting? (Yes/No)");
+        System.out.print("how many days are you renting? ");
 
         return input.nextInt();
     }
 
+    // changed to string instead of boolean
+
+    // added toLowercase to handle case senstivity
+
     public static String tollTag(Scanner input){
-        System.out.print("Do you want a toll tag ? ");
+        System.out.print("Do you want a toll tag ? (Yes/No) ");
 
         return input.next().toLowerCase();
 
     }
+
+    //
     public static String wantGPS (Scanner input) {
         System.out.print("Do you want GPS? (Yes/No) ");
         return input.next().toLowerCase();
