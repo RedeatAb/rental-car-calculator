@@ -8,18 +8,18 @@ public class rentalCar {
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in); // creating one unified scanner for input
 
-        System.out.println("--Welcome to Redeat's Rental ---");
+        System.out.println("---Welcome to Redeat's Rental ----");
 
-        String date = askPickUpDate(input);
+        String date = askPickUpDate(input); // calling all the methods
         int days =daysOfRental(input);
         String toll = tollTag(input);
         String gps = wantGPS(input);
         String roadAssistance =wantRoadAssistance(input);
         int personAge = age(input);
 
-        // basic Car rental
+        // basic Car rental price
 
         double costPerDay = 29.99 * days;
 
@@ -28,7 +28,7 @@ public class rentalCar {
         double roadAssitCost= 0;
         double ageCost = 0;
 
-
+        //adding if condtionals to calculating rental add ons
         if(toll.equals("yes")){
             tollTagCost = 3.95 * days;
 
@@ -44,6 +44,8 @@ public class rentalCar {
            ageCost = 0.3 * costPerDay;
         }
 
+
+        // adding total final cost
         double totalCost= costPerDay + tollTagCost + gpsCost + roadAssitCost + ageCost;
 
 
@@ -51,7 +53,7 @@ public class rentalCar {
 
 
         //display results
-
+        System.out.println("--DISPLAY CHOICES----");
         System.out.println("Your Pick up date is " + date);
         System.out.println("The amount of rental days is  " + days);
         System.out.println("Do you want Toll Tag?  " + toll);
@@ -61,13 +63,15 @@ public class rentalCar {
 
 
         // display Cost Amount
-
+        System.out.println("---COST BREAKDOWN-----");
         System.out.println("The Cost perday is: " + costPerDay);
         System.out.println("The  cost with road assitance is " + roadAssitCost);
         System.out.println("The cost with GPS is " + gpsCost);
         System.out.println("The cost with Toll Tag is " + tollTagCost);
         System.out.println("The cost of Rental car under 25 is " + ageCost);
         System.out.printf("The total amount is  $%.2f%n" , totalCost);
+
+        input.close();
 
 
 
